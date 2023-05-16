@@ -1,7 +1,10 @@
-// import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
+import rocketsReducer from './rockets/rocketsSlice';
 
-// export const store = configureStore({
-//   reducer: {
-//     counter: counterReducer,
-//   },
-// });
+const store = configureStore({
+  reducer: {
+    rockets: rocketsReducer,
+  },
+});
+
+export default store;

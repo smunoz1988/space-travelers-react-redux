@@ -1,5 +1,5 @@
-import React from 'react';
-// import { Counter } from './features/counter/Counter';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   Navigate, Route, Routes,
 } from 'react-router-dom';
@@ -8,8 +8,16 @@ import Navbar from './Components/NavBar';
 import Rockets from './routes/Rockets';
 import Missions from './routes/Missions';
 import MyProfile from './routes/MyProfile';
+import { getRockets } from './redux/rockets/rocketsSlice';
 
 function App() {
+  //  const { rockets } = useSelector((store) => store.rockets);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getRockets());
+  }, [dispatch]);
+
   return (
     <>
       <Navbar />
