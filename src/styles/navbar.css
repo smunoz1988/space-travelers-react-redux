@@ -1,0 +1,34 @@
+.link {
+  text-decoration: none;
+}
+
+.link-active {
+  text-decoration: underline;
+  background-color: darkorange;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.line {
+  border-right: solid #e8e8e8;
+  padding: 0 1rem 0 0;
+}
