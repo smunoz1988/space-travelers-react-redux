@@ -1,15 +1,21 @@
-import React from 'react';
-// import { Counter } from './features/counter/Counter';
 import {
   Navigate, Route, Routes,
 } from 'react-router-dom';
 import './App.css';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Navbar from './Components/NavBar';
 import Rockets from './routes/Rockets';
 import Missions from './routes/Missions';
 import MyProfile from './routes/MyProfile';
+import { getMissions } from './redux/missions/missionsSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getMissions());
+  });
+
   return (
     <>
       <Navbar />
