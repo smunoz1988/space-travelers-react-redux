@@ -33,7 +33,7 @@ export const rocketsSlice = createSlice({
       const id = payload;
       const newState = state.rockets.map((rocket) => {
         if (rocket.id !== id) return rocket;
-        //  if (rocket.reserved === true) return { ...rocket, reserved: false };
+        if (rocket.reserved === true) return { ...rocket, reserved: false };
         return { ...rocket, reserved: true };
       });
       state.rockets = newState;
