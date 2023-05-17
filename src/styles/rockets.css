@@ -1,0 +1,41 @@
+.li-rocket {
+  display: flex;
+  padding: 1.5rem 0;
+}
+
+.image-rocket {
+  width: 12rem;
+}
+
+.rocket-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.rocket-description {
+  margin-top: 0.5rem;
+}
+
+.rocket-text-container {
+  padding: 0 1rem;
+}
+
+.btn {
+  background-color: #0095ff; /* Green */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 5px 7px 19px -7px rgba(0, 0, 0, 0.68);
+}
+
+.btn:hover {
+  background-color: #0066ff;
+}
+
+.btn:active {
+  transform: translate(1px, 1px);
+}
