@@ -13,9 +13,6 @@ export const getRockets = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const resp = await axios(url);
-      //  console.log(resp.data);
-      //  return resp.data;
-      //  resp.data.map((item) => console.log(item));
       return resp.data.map((item) => ({
         id: item.id,
         name: item.rocket_name,
@@ -31,17 +28,24 @@ export const getRockets = createAsyncThunk(
 export const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {},
+  reducers: {
+    reserveRocket: (state, { payload }) => {
+      const id = payload;
+      const newState = state.rockets.map((rocket) => {
+        if (rocket.id !== id) return rocket;
+        //  if (rocket.reserved === true) return { ...rocket, reserved: false };
+        return { ...rocket, reserved: true };
+      });
+      state.rockets = newState;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getRockets.fulfilled, (state, action) => {
-      //  console.log(action.payload[0].id);
-      //  console.log(action.payload);
-      /* action.payload.map((item) => {
-        console.log(item[0].name);
-      }) */
       state.rockets = action.payload;
     });
   },
 });
 
 export default rocketsSlice.reducer;
+
+export const { reserveRocket } = rocketsSlice.actions;

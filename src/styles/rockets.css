@@ -39,3 +39,11 @@
 .btn:active {
   transform: translate(1px, 1px);
 }
+
+.reserved {
+  background-color: rgb(180, 176, 171);
+}
+
+.reserved-tag {
+  color: red;
+}
