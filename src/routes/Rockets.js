@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import '../styles/rockets.css';
 
 const Rockets = () => {
   //  const dispatch = useDispatch();
@@ -6,22 +7,25 @@ const Rockets = () => {
   //  console.log(rockets);
   return (
     <div>
-      {Object.entries(rockets).map((rocket) => {
-        const {
-          id, images, name, type,
-        } = rocket[1][0];
-        return (
-          <p key={id + name}>
-            {' '}
-            Rocket Name:
-            {name}
-            ,
-            {images}
-            ,
-            {type}
-          </p>
-        );
-      })}
+      <ul>
+        {rockets.map((rocket) => {
+          const {
+            id, images, name, description,
+          } = rocket;
+          return (
+            <li key={id} className="li-rocket">
+              <img className="image-rocket" src={images} alt="A rocket" />
+              <div className="rocket-text-container">
+                <h3 className="rocket-title">{name}</h3>
+                <p className="rocket-description">{description}</p>
+                <button className="btn" type="button">
+                  Reserve rocket
+                </button>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
