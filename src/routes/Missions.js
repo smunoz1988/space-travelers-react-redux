@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import '../styles/missions.css';
-import { applyMission } from '../redux/missions/missionsSlice';
+import { applyMission, leaveMission } from '../redux/missions/missionsSlice';
 
 const Missions = () => {
   const missionsData = useSelector((store) => store.mission);
@@ -9,6 +9,10 @@ const Missions = () => {
 
   const joinMission = (missionId) => {
     dispatch(applyMission({ missionId }));
+  };
+
+  const quitMission = (missionId) => {
+    dispatch(leaveMission({ missionId }));
   };
 
   return (
@@ -33,7 +37,7 @@ const Missions = () => {
                   Join Mission
                 </button>
               ) : (
-                <button type="button">Leave</button>
+                <button type="button" key={dat.mission_id} onClick={() => quitMission(dat.mission_id)}>Leave</button>
               )}
 
             </td>
