@@ -6,13 +6,34 @@ const Rockets = () => {
   //  console.log(rockets);
   return (
     <div>
-      {Object.entries(rockets).map((rocket) => {
+      {/* {Object.entries(rockets).map((rocket) => {
         const {
           id, images, name, type,
         } = rocket[1][0];
         return (
           <p key={id + name}>
-            {' '}
+            {}
+            Rocket Name:
+            {name}
+            ,
+            {images}
+            ,
+            {type}
+          </p>
+        );
+      })} */}
+
+      {/* {rockets.map((rocket) => {
+        console.log(rocket[0]);
+      })} */}
+
+      {rockets.map((rocket) => {
+        const {
+          id, images, name, type,
+        } = rocket;
+        return (
+          <p key={id + name}>
+            {}
             Rocket Name:
             {name}
             ,

@@ -5,7 +5,7 @@ import axios from 'axios';
 const url = 'https://api.spacexdata.com/v3/rockets';
 
 const initialState = {
-  rockets: ['value'],
+  rockets: [],
 };
 
 export const getRockets = createAsyncThunk(
@@ -15,18 +15,13 @@ export const getRockets = createAsyncThunk(
       const resp = await axios(url);
       //  console.log(resp.data);
       //  return resp.data;
-      return resp.data.map((item) => [
-        {
-          id: item.id,
-          name: item.rocket_name,
-          type: item.rocket_type,
-          images: item.flickr_images,
-        },
-        /* { id: item.id },
-        { name: item.rocket_name },
-        { type: item.rocket_type },
-        { images: item.flickr_images }, */
-      ]);
+      //  resp.data.map((item) => console.log(item));
+      return resp.data.map((item) => ({
+        id: item.id,
+        name: item.rocket_name,
+        type: item.rocket_type,
+        images: item.flickr_images[0],
+      }));
     } catch (error) {
       return rejectWithValue(error.resp.data);
     }
@@ -40,7 +35,10 @@ export const rocketsSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getRockets.fulfilled, (state, action) => {
       //  console.log(action.payload[0].id);
-      //  console.log(action.payload[0]);
+      //  console.log(action.payload);
+      /* action.payload.map((item) => {
+        console.log(item[0].name);
+      }) */
       state.rockets = action.payload;
     });
   },
