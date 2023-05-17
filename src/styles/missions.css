@@ -17,3 +17,23 @@ th {
 tr:nth-child(even) {
   background-color: #ddd;
 }
+
+button {
+  background-color: #0095ff; /* Green */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 5px 7px 19px -7px rgba(0, 0, 0, 0.68);
+}
+
+button:hover {
+  background-color: #06f;
+}
+
+button:active {
+  transform: translate(1px, 1px);
+}

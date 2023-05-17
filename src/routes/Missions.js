@@ -30,7 +30,11 @@ const Missions = () => {
           <tr>
             <td>{dat.mission_name}</td>
             <td>{dat.description}</td>
-            <td>Not a member</td>
+            {!dat.reserved ? (
+              <td>Not a member</td>
+            ) : (
+              <td>ACTIVE MEMBER</td>
+            )}
             <td>
               {!dat.reserved ? (
                 <button type="button" key={dat.mission_id} onClick={() => joinMission(dat.mission_id)}>
