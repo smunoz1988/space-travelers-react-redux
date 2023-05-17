@@ -1,6 +1,4 @@
-import {
-  Navigate, Route, Routes,
-} from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -16,7 +14,7 @@ function App() {
   useEffect(() => {
     dispatch(getMissions());
     dispatch(getRockets());
-  });
+  }, [dispatch]);
 
   return (
     <>
