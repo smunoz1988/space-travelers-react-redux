@@ -7,12 +7,13 @@ table {
   margin-bottom: 2rem;
 }
 
-td, th {
-  border: 1px solid #dddddd;
+td,
+th {
+  border: 1px solid #ddd;
   text-align: left;
   padding: 0.7rem;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #ddd;
 }
