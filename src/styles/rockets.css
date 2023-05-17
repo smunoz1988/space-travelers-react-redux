@@ -46,5 +46,9 @@
 }
 
 .reserved-tag {
-  color: red;
+  font-size: 10px;
+  padding: 2px 5px;
+  color: white;
+  background: #19a2b9;
+  border-radius: 5px;
 }

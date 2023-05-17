@@ -34,7 +34,7 @@ const Rockets = () => {
                     dispatch(reserveRocket(id));
                   }}
                 >
-                  {reserved ? 'Reserved' : 'Reserve Rocket'}
+                  {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
                 </button>
               </div>
             </li>
