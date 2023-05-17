@@ -1,9 +1,15 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import '../styles/missions.css';
+import { applyMission } from '../redux/missions/missionsSlice';
 
 const Missions = () => {
   const missionsData = useSelector((store) => store.mission);
   const data = missionsData.missions;
+  const dispatch = useDispatch();
+
+  const joinMission = (missionId) => {
+    dispatch(applyMission({ missionId }));
+  };
 
   return (
     <table>
@@ -16,12 +22,21 @@ const Missions = () => {
         </tr>
       </thead>
       {data.map((dat) => (
-        <tbody key={dat[0].mission_id}>
+        <tbody key={dat.mission_id}>
           <tr>
-            <td>{dat[0].mission_name}</td>
-            <td>{dat[0].description}</td>
+            <td>{dat.mission_name}</td>
+            <td>{dat.description}</td>
             <td>Not a member</td>
-            <td><button type="button">Join Mission</button></td>
+            <td>
+              {!dat.reserved ? (
+                <button type="button" key={dat.mission_id} onClick={() => joinMission(dat.mission_id)}>
+                  Join Mission
+                </button>
+              ) : (
+                <button type="button">Leave</button>
+              )}
+
+            </td>
           </tr>
         </tbody>
       ))}

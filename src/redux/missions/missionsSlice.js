@@ -11,17 +11,27 @@ const initialState = {
 
 export const getMissions = createAsyncThunk('mission/getMissions', () => axios
   .get(url)
-  .then((response) => response.data.map((name) => [
-    {
-      mission_id: name.mission_id,
-      mission_name: name.mission_name,
-      description: name.description,
-    },
-  ])));
+  .then((response) => response.data.flatMap((name) => ({
+    mission_id: name.mission_id,
+    mission_name: name.mission_name,
+    description: name.description,
+  }))));
 
 const missionSlice = createSlice({
   name: 'mission',
   initialState,
+  reducers: {
+    applyMission: (state, action) => {
+      const { missionId } = action.payload;
+      const missions = state.missions.map((mission) => {
+        if (mission.mission_id === missionId) {
+          return { ...mission, reserved: true };
+        }
+        return mission;
+      });
+      return { ...state, missions };
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getMissions.pending, (state) => {
       state.loading = true;
@@ -38,5 +48,7 @@ const missionSlice = createSlice({
     });
   },
 });
+
+export const { applyMission } = missionSlice.actions;
 
 export default missionSlice.reducer;
