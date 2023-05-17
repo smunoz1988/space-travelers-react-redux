@@ -9,7 +9,9 @@ const Rockets = () => {
     <div>
       <ul>
         {rockets.map((rocket) => {
-          const { id, images, name, description } = rocket;
+          const {
+            id, images, name, description,
+          } = rocket;
           return (
             <li key={id} className="li-rocket">
               <img className="image-rocket" src={images} alt="A rocket" />
