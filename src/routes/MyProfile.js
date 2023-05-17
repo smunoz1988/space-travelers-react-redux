@@ -1,6 +1,8 @@
+import DisplayRockets from '../Components/DisplayRockets';
+
 const MyProfile = () => (
   <div>
-    MyProfile
+    <DisplayRockets />
   </div>
 );
 
