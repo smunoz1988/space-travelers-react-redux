@@ -1,6 +1,8 @@
+import MissionProfile from '../Components/MissionProfile';
+
 const MyProfile = () => (
   <div>
-    MyProfile
+    <MissionProfile />
   </div>
 );
 
