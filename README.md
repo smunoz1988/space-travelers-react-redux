@@ -61,7 +61,7 @@
 
 ### Live Demo <a name="live-demo"></a>
 
-https://space-travelers-jw03.onrender.com/Rockets
+https://space-travelers-jw03.onrender.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,7 +136,7 @@ To run the ESLint linter
 
 You can see the live version of this project using:
 
-https://space-travelers-jw03.onrender.com/Rockets
+https://space-travelers-jw03.onrender.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
