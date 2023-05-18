@@ -17,7 +17,7 @@ const MissionProfile = () => {
   }
 
   return (
-    <p>Empty list</p>
+    <p>No missions assigned</p>
   );
 };
 
