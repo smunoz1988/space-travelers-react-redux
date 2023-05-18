@@ -30,20 +30,19 @@ const Missions = () => {
           <tr>
             <td>{dat.mission_name}</td>
             <td>{dat.description}</td>
-            {!dat.reserved ? (
-              <td>Not a member</td>
-            ) : (
-              <td>ACTIVE MEMBER</td>
-            )}
+            {!dat.reserved && <td><p className="notMember">NOT A MEMBER</p></td>}
+            {dat.reserved && <td><p className="member">Active Member</p></td>}
             <td>
-              {!dat.reserved ? (
-                <button type="button" key={dat.mission_id} onClick={() => joinMission(dat.mission_id)}>
+              {!dat.reserved && (
+                <button className="joinBtn" type="button" key={dat.mission_id} onClick={() => joinMission(dat.mission_id)}>
                   Join Mission
                 </button>
-              ) : (
-                <button type="button" key={dat.mission_id} onClick={() => quitMission(dat.mission_id)}>Leave</button>
               )}
-
+              {dat.reserved && (
+                <button className="leaveBtn" type="button" key={dat.mission_id} onClick={() => quitMission(dat.mission_id)}>
+                  Leave
+                </button>
+              )}
             </td>
           </tr>
         </tbody>

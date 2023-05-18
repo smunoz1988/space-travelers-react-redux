@@ -18,22 +18,54 @@ tr:nth-child(even) {
   background-color: #ddd;
 }
 
-button {
-  background-color: #0095ff; /* Green */
-  border: none;
+.joinBtn {
+  border: #93999f solid 0.1rem;
   border-radius: 5px;
-  color: white;
+  width: 8rem;
+  color: #93999f;
   padding: 0.5rem 1rem;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 5px 7px 19px -7px rgba(0, 0, 0, 0.68);
+  background-color: white;
 }
 
-button:hover {
-  background-color: #06f;
+.joinBtn:hover {
+  background-color: #93999f;
+  color: white;
 }
 
-button:active {
-  transform: translate(1px, 1px);
+.leaveBtn {
+  border: red solid 0.1rem;
+  border-radius: 5px;
+  width: 8rem;
+  color: red;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.leaveBtn:hover {
+  background-color: #93999f;
+  color: white;
+}
+
+.notMember {
+  background-color: #93999f;
+  border-radius: 0.5rem;
+  width: 5rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.member {
+  background-color: #19a2b9;
+  border-radius: 0.5rem;
+  width: 5rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: white;
 }
