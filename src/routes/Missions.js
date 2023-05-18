@@ -16,7 +16,7 @@ const Missions = () => {
   };
 
   return (
-    <table>
+    <table className="missionTable">
       <thead>
         <tr>
           <th>Mission</th>

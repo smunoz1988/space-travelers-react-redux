@@ -19,9 +19,12 @@
 
 .rocket-text-container {
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
+  width: 10rem;
   background-color: #0095ff; /* Green */
   border: none;
   border-radius: 5px;
@@ -45,10 +48,19 @@
   background-color: rgb(180, 176, 171);
 }
 
+.reserved:hover {
+  background-color: rgb(156, 151, 146);
+}
+
 .reserved-tag {
   font-size: 10px;
   padding: 2px 5px;
   color: white;
   background: #19a2b9;
   border-radius: 5px;
+}
+
+.profile-table {
+  min-width: 25rem;
+  text-align: center;
 }

@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import '../styles/missionProfile.css';
 
 const MissionProfile = () => {
   const missionsData = useSelector((store) => store.mission);
@@ -7,18 +6,22 @@ const MissionProfile = () => {
 
   const reservedMissions = data.filter((item) => item.reserved === true);
 
-  if (reservedMissions.length > 0) {
-    return (
-      <ul>
-        {reservedMissions.map((reserved) => (
-          <li key={reserved.mission_id}>{reserved.mission_name}</li>
-        ))}
-      </ul>
-    );
-  }
-
   return (
-    <p>No missions assigned</p>
+    <>
+      {reservedMissions.length > 0 ? (
+        <table className="profile-table">
+          <tbody>
+            {reservedMissions.map((reserved) => (
+              <tr key={reserved.mission_id}>
+                <td>{reserved.mission_name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p className="profile-table">No missions assigned</p>
+      )}
+    </>
   );
 };
 

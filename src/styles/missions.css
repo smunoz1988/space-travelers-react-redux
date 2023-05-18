@@ -1,4 +1,4 @@
-table {
+.missionTable {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 95%;
@@ -10,7 +10,7 @@ table {
 td,
 th {
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center;
   padding: 0.7rem;
 }
 
