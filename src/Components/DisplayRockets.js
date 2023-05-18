@@ -4,18 +4,25 @@ import { useSelector } from 'react-redux';
 const DisplayRockets = () => {
   const { rockets } = useSelector((store) => store.rockets);
   const rocketFilter = rockets.filter((rocket) => rocket.reserved);
+
   return (
-    <div>
-      <ul>
-        {rocketFilter.map((rocket) => {
-          return (
-            <li key={rocket.id} className="li-rocket">
-              {rocket.name}
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <>
+      {rocketFilter.length > 0 ? (
+        <table className="profile-table">
+          <tbody>
+            {rocketFilter.map((rocket) => {
+              return rocket.reserved && (
+                <tr key={rocket.id}>
+                  <td>{rocket.name}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <p className="profile-table">No rockets reserved</p>
+      )}
+    </>
   );
 };
 
