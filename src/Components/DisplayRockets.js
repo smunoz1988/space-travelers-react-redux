@@ -7,7 +7,7 @@ const DisplayRockets = () => {
 
   return (
     <>
-      {rocketFilter.length > 0 ? (
+      {rocketFilter.length > 0 && (
         <table className="profile-table">
           <tbody>
             {rocketFilter.map((rocket) => {
@@ -19,9 +19,8 @@ const DisplayRockets = () => {
             })}
           </tbody>
         </table>
-      ) : (
-        <p className="profile-table">No rockets reserved</p>
       )}
+      {!rocketFilter.length && (<p className="profile-table">No rockets reserved</p>)}
     </>
   );
 };

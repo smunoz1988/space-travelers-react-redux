@@ -5,12 +5,11 @@ import '../styles/rockets.css';
 const Rockets = () => {
   const dispatch = useDispatch();
   const { rockets } = useSelector((store) => store.rockets);
-  //  console.log(rockets);
+
   return (
     <div>
       <ul>
         {rockets.map((rocket) => {
-          //  console.log(rocket);
           const {
             id, images, name, description, reserved,
           } = rocket;
@@ -20,12 +19,8 @@ const Rockets = () => {
               <div className="rocket-text-container">
                 <h3 className="rocket-title">{name}</h3>
                 <p className="rocket-description">
-                  {reserved ? (
-                    <span className="reserved-tag">Reserved</span>
-                  ) : (
-                    ''
-                  )}
-                  {description}
+                  {reserved && (<span className="reserved-tag">Reserved</span>)}
+                  {` ${description}` }
                 </p>
                 <button
                   className={`btn ${reserved ? 'reserved' : ''}`}
@@ -34,7 +29,8 @@ const Rockets = () => {
                     dispatch(reserveRocket(id));
                   }}
                 >
-                  {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+                  {reserved && 'Cancel Reservation'}
+                  {!reserved && 'Reserve Rocket'}
                 </button>
               </div>
             </li>
