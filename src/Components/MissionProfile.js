@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import '../styles/missionProfile.css';
 
 const MissionProfile = () => {
   const missionsData = useSelector((store) => store.mission);
