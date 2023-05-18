@@ -17,9 +17,9 @@ describe('MissionProfile component', () => {
       { mission_id: 3, mission_name: 'Mission 3', reserved: false },
     ];
 
-    useSelector.mockImplementation((selectorFn) =>
-      selectorFn({ mission: { missions: mockedMissions } })
-    );
+    useSelector.mockImplementation((selectorFn) => selectorFn(
+      { mission: { missions: mockedMissions } },
+    ));
 
     const { container, getByText } = render(<MissionProfile />);
 
@@ -30,9 +30,7 @@ describe('MissionProfile component', () => {
   });
 
   it('renders "No missions assigned" when no reserved missions', () => {
-    useSelector.mockImplementation((selectorFn) =>
-      selectorFn({ mission: { missions: [] } })
-    );
+    useSelector.mockImplementation((selectorFn) => selectorFn({ mission: { missions: [] } }));
 
     const { container, getByText } = render(<MissionProfile />);
 
