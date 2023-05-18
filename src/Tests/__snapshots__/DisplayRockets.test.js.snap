@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayRcplets component Renders reserved rockets correctly 1`] = `
+<table
+  class="profile-table"
+>
+  <tbody>
+    <tr>
+      <td>
+        Falcon 1
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Falcon 9
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`DisplayRcplets component renders "No missions assigned" when no reserved missions 1`] = `
+<p
+  class="profile-table"
+>
+  No rockets reserved
+</p>
+`;
