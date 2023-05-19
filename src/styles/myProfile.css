@@ -4,3 +4,10 @@
   margin: 0 5rem;
   text-align: center;
 }
+
+@media (max-width: 667px) {
+  .joinContainer {
+    flex-direction: column;
+    margin: 0;
+  }
+}

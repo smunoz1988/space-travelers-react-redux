@@ -22,16 +22,18 @@ const Rockets = () => {
                   {reserved && (<span className="reserved-tag">Reserved</span>)}
                   {` ${description}` }
                 </p>
-                <button
-                  className={`btn ${reserved ? 'reserved' : ''}`}
-                  type="button"
-                  onClick={() => {
-                    dispatch(reserveRocket(id));
-                  }}
-                >
-                  {reserved && 'Cancel Reservation'}
-                  {!reserved && 'Reserve Rocket'}
-                </button>
+                <div className="buttonContainer">
+                  <button
+                    className={`btn ${reserved ? 'reserved' : ''}`}
+                    type="button"
+                    onClick={() => {
+                      dispatch(reserveRocket(id));
+                    }}
+                  >
+                    {reserved && 'Cancel Reservation'}
+                    {!reserved && 'Reserve Rocket'}
+                  </button>
+                </div>
               </div>
             </li>
           );

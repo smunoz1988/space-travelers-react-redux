@@ -69,3 +69,35 @@
   min-width: 25rem;
   text-align: center;
 }
+
+@media (max-width: 667px) {
+  .li-rocket {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-table {
+    min-width: 15rem;
+    text-align: center;
+    margin: auto;
+  }
+
+  .image-rocket {
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  .rocket-text-container {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+}

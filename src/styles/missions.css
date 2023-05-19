@@ -69,3 +69,43 @@ tr:nth-child(even) {
   font-size: 0.8rem;
   color: white;
 }
+
+@media (max-width: 667px) {
+  th {
+    display: none;
+  }
+
+  tbody:nth-child(even) {
+    background-color: #ddd;
+  }
+
+  td {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  td::before {
+    font-weight: 700;
+  }
+
+  td:nth-of-type(1)::before {
+    content: "Mission";
+    padding-bottom: 0.5rem;
+  }
+
+  td:nth-of-type(2)::before {
+    content: "Description";
+    padding-bottom: 0.5rem;
+  }
+
+  td:nth-of-type(3)::before {
+    content: "Status";
+    padding-bottom: 0.5rem;
+  }
+
+  td:nth-of-type(4)::before {
+    content: "Action";
+    padding-bottom: 0.5rem;
+  }
+}
