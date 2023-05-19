@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar functionality navigates to the Missions page when Missions link is clicked 1`] = `
+<nav
+  class="nav-container"
+>
+  <div
+    class="logo-container"
+  >
+    <img
+      alt="logo"
+      class="logo"
+      src="planet.png"
+    />
+    Space Travelers' Hub
+  </div>
+  <div
+    class="links-container"
+  >
+    <a
+      class="link"
+      href="/Rockets"
+    >
+      Rockets
+    </a>
+    <a
+      aria-current="page"
+      class="link-active line"
+      href="/Missions"
+    >
+      Missions
+    </a>
+    <a
+      class="link"
+      href="/MyProfile"
+    >
+      My Profile
+    </a>
+  </div>
+</nav>
+`;
+
+exports[`Navbar functionality render correctly 1`] = `
+<nav
+  class="nav-container"
+>
+  <div
+    class="logo-container"
+  >
+    <img
+      alt="logo"
+      class="logo"
+      src="planet.png"
+    />
+    Space Travelers' Hub
+  </div>
+  <div
+    class="links-container"
+  >
+    <a
+      class="link"
+      href="/Rockets"
+    >
+      Rockets
+    </a>
+    <a
+      class="link line"
+      href="/Missions"
+    >
+      Missions
+    </a>
+    <a
+      class="link"
+      href="/MyProfile"
+    >
+      My Profile
+    </a>
+  </div>
+</nav>
+`;

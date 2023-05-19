@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+
+* {
+  font-family: 'Strait', sans-serif;
+}
+
+.test {
+  background-color: black;
+}

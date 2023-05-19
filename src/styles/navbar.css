@@ -1,0 +1,39 @@
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.link-active {
+  text-decoration: underline;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.03rem rgb(219, 212, 212) solid;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.line {
+  border-right: solid #e8e8e8;
+  padding: 0 1rem 0 0;
+}

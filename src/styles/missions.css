@@ -1,0 +1,71 @@
+.missionTable {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 0.7rem;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.joinBtn {
+  border: #93999f solid 0.1rem;
+  border-radius: 5px;
+  width: 8rem;
+  color: #93999f;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.joinBtn:hover {
+  background-color: #93999f;
+  color: white;
+}
+
+.leaveBtn {
+  border: red solid 0.1rem;
+  border-radius: 5px;
+  width: 8rem;
+  color: red;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.leaveBtn:hover {
+  background-color: #93999f;
+  color: white;
+}
+
+.notMember {
+  background-color: #93999f;
+  border-radius: 0.5rem;
+  width: 5rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.member {
+  background-color: #19a2b9;
+  border-radius: 0.5rem;
+  width: 5rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: white;
+}

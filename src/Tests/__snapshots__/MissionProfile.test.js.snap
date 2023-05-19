@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MissionProfile component renders "No missions assigned" when no reserved missions 1`] = `
+<p
+  class="profile-table"
+>
+  No missions assigned
+</p>
+`;
+
+exports[`MissionProfile component renders reserved missions correctly 1`] = `
+<table
+  class="profile-table"
+>
+  <tbody>
+    <tr>
+      <td>
+        Mission 1
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Mission 2
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
