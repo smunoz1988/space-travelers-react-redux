@@ -37,3 +37,13 @@
   border-right: solid #e8e8e8;
   padding: 0 1rem 0 0;
 }
+
+@media (max-width: 667px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 2rem;
+  }
+}
