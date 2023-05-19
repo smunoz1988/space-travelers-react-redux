@@ -1,10 +1,17 @@
-import { useSelector } from 'react-redux';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { leaveMission } from '../redux/missions/missionsSlice';
 
 const MissionProfile = () => {
   const missionsData = useSelector((store) => store.mission);
   const data = missionsData.missions;
+  const dispatch = useDispatch();
 
   const reservedMissions = data.filter((item) => item.reserved === true);
+
+  const quitMission = (missionId) => {
+    dispatch(leaveMission({ missionId }));
+  };
 
   return (
     <>
@@ -14,6 +21,15 @@ const MissionProfile = () => {
             {reservedMissions.map((reserved) => (
               <tr key={reserved.mission_id}>
                 <td>{reserved.mission_name}</td>
+                <td>
+                  <button
+                    className="leaveBtn"
+                    type="button"
+                    onClick={() => quitMission(reserved.mission_id)}
+                  >
+                    Leave
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
