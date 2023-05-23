@@ -30,7 +30,7 @@
 
 # 📖 Space-Travelers-React <a name="about-project"></a>
 
-> In this project, Webuild a space travelers website using react and redux.
+> In this project, We build a space travelers website using react and redux.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
